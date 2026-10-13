@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AURA personal productivity assistant prototype">
+  <title>AURA — AI Personal Butler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">A</span><div><strong>AURA</strong><small>PERSONAL BUTLER</small></div></div>
+      <nav><a class="active" href="#overview">◈ Overview</a><a href="#tasks">✓ Tasks</a><a href="#activity">◉ Activity</a><a href="#notes">✎ Quick notes</a></nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Prototype mode <small>Local demo only</small></div>
+    </aside>
+    <main class="main" id="overview">
+      <header class="topbar"><div><p class="eyebrow">YOUR PERSONAL WORKSPACE</p><h1>Good day. <span>What’s on your mind?</span></h1></div><div class="date-pill" id="today"></div></header>
+      <section class="hero">
+        <div><p class="eyebrow">AURA ASSISTANT</p><h2>One calm place for<br>everything on your plate.</h2><p>Capture tasks, review activity, and keep your next step clear.</p>
+          <form id="command-form" class="command"><span>✧</span><input id="command-input" placeholder="Try “add task: prepare interview”" aria-label="Ask AURA"><button>Ask AURA ↗</button></form>
+          <p class="hint">Try: “help”, “what should I do next?” or “add task: revise SQL joins”.</p>
+        </div>
+        <div class="orb-wrap"><div class="orb"><span>✧</span></div><div class="orb-caption">AURA <span>•</span> READY TO HELP</div></div>
+      </section>
+      <section class="stats"><article><span>OPEN TASKS</span><strong id="open-count">0</strong><small>Things to move forward</small></article><article><span>COMPLETED</span><strong id="done-count">0</strong><small>Progress you’ve made</small></article><article><span>QUICK NOTES</span><strong id="note-count">0</strong><small>Ideas worth keeping</small></article></section>
+      <div class="content-grid">
+        <section class="panel" id="tasks"><div class="panel-head"><div><p class="eyebrow">STAY IN MOTION</p><h3>My tasks</h3></div><span class="count" id="task-label">0 items</span></div>
+          <form id="task-form" class="inline-form"><input id="task-input" maxlength="120" placeholder="Add a task…" aria-label="New task" required><button class="primary">+ Add</button></form><div id="task-list" class="task-list"></div>
+        </section>
+        <section class="panel" id="activity"><div class="panel-head"><div><p class="eyebrow">WHAT’S HAPPENING</p><h3>Activity feed</h3></div><select id="activity-filter" aria-label="Filter activity"><option value="all">All activity</option><option value="work">Work</option><option value="personal">Personal</option></select></div><div id="activity-list" class="activity-list"></div><p class="sample-note">Sample items for demonstration — no external accounts connected.</p></section>
+      </div>
+      <section class="panel notes-panel" id="notes"><div class="panel-head"><div><p class="eyebrow">SAVE THE THOUGHT</p><h3>Quick notes</h3></div></div><form id="note-form" class="inline-form"><input id="note-input" maxlength="240" placeholder="Capture an idea…" aria-label="New note" required><button class="primary">Save note</button></form><div id="note-list" class="note-list"></div></section>
+      <footer>Built as an AI & ML student project · <span>Prototype, not connected to external accounts</span></footer>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
