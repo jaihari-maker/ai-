@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251f">
+  <meta name="description" content="ParkEase is a smart parking finder prototype to search, compare and demo-reserve parking spaces.">
+  <title>ParkEase — Smart Parking Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ParkEase home"><span class="brand-mark">P</span><span>Park<span class="brand-light">Ease</span></span></a>
+    <div class="topbar-note"><span class="live-dot"></span> SMART PARKING CONCEPT</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> PARK SMARTER, ARRIVE HAPPIER</p>
+        <h1>Your spot.<br><em>Without the search.</em></h1>
+        <p class="hero-sub">Discover parking options, compare prices, and find a convenient place to leave your vehicle.</p>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>Sample locations</span></div>
+          <div><strong>₹20<span class="stat-unit">/hr</span></strong><span>Starting estimate</span></div>
+          <div><strong>2</strong><span>Vehicle categories</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="pin pin-back">P</div>
+        <div class="car-card"><div class="car-top"></div><div class="car-body"><span></span><span></span></div><div class="car-wheel wheel-one"></div><div class="car-wheel wheel-two"></div></div>
+        <div class="floating-tag tag-one"><span class="tag-icon">✓</span> Easy to compare</div>
+        <div class="floating-tag tag-two"><span class="tag-icon">⌖</span> Chennai, India</div>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-label="Find parking">
+      <div class="search-heading"><div><p class="eyebrow">FIND YOUR PARKING</p><h2>Where are you headed?</h2></div><span class="demo-label">DEMO DATA</span></div>
+      <div class="search-controls">
+        <label class="search-box"><span class="search-icon">⌕</span><span class="sr-only">Search by area or parking name</span><input id="searchInput" type="search" placeholder="Search area or parking name..." autocomplete="off"></label>
+        <label class="select-wrap"><span class="sr-only">Availability</span><select id="availabilityFilter"><option value="all">All availability</option><option value="available">Available now</option><option value="limited">Limited spaces</option></select></label>
+        <label class="select-wrap"><span class="sr-only">Vehicle type</span><select id="vehicleFilter"><option value="all">All vehicle types</option><option value="Car">Car</option><option value="Bike">Bike</option></select></label>
+        <button id="clearButton" class="clear-button" type="button">Reset</button>
+      </div>
+      <div class="results-bar"><p id="resultCount">Showing 6 locations</p><label class="sort-wrap">Sort by <select id="sortSelect"><option value="recommended">Recommended</option><option value="price">Lowest price</option><option value="spaces">Most spaces</option></select></label></div>
+      <div id="parkingGrid" class="parking-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No parking spots found</h3><p>Try another area or reset your filters.</p><button class="button button-dark" id="emptyReset" type="button">Reset filters</button></div>
+      <p class="disclaimer">Prototype notice: locations, prices and availability are illustrative sample data. Reservations are simulated and do not book a real space.</p>
+    </section>
+
+    <section class="how-section">
+      <div><p class="eyebrow">SIMPLE BY DESIGN</p><h2>Parking, in three steps.</h2></div>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Search your area</h3><p>Look up a neighbourhood or a parking location.</p></article>
+        <article class="step"><span class="step-number">02</span><div class="step-icon">↔</div><h3>Compare options</h3><p>Check estimated prices, space counts, and vehicle types.</p></article>
+        <article class="step"><span class="step-number">03</span><div class="step-icon">✓</div><h3>Try a reservation</h3><p>Test the demo booking flow and view your confirmation.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">P</span><span>Park<span class="brand-light">Ease</span></span></a><p>Designed as a student project prototype · Chennai, India</p><a href="https://github.com/jaihari-maker/ai-" target="_blank" rel="noreferrer">View source ↗</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
