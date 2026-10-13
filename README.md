@@ -1,31 +1,29 @@
-# ParkEase — Smart Parking Finder
+# Student Projects — Jai Hari
 
-ParkEase is a responsive front-end prototype that helps users explore parking options around Chennai, compare estimated hourly prices, filter by availability, and try a demo reservation flow.
+A collection of student-built software projects demonstrating web development, Python automation, and AI-assistant interface concepts.
 
-## Features
-- Search parking locations by name or area
-- Filter by availability and parking type
-- Sort by hourly price or available spaces
-- Demo reservation button with local state
-- Responsive layout for desktop and mobile
-- Open a location search in Google Maps
-- No API key or installation required
+## Projects
 
-## Run locally
-1. Download or clone this repository.
-2. Open `index.html` in a browser.
+### 1. ParkEase — Smart Parking Finder
+A responsive parking-finder web demo with location search, sample availability, filters, sorting, simulated reservations, and Google Maps search links.
+- Folder: repository root (`index.html`, `style.css`, `script.js`)
+- Stack: HTML, CSS, JavaScript
+- Note: Uses sample parking data; no live parking provider is connected.
 
-## Important project note
-This is an educational prototype. Parking locations, prices, and availability are **sample data**, not live data from parking operators. Reservations are simulated in the browser and do not book a real parking space.
+### 2. Jarvis — AI Virtual Assistant
+A Python voice/typed-command assistant that speaks responses, reports time/date, opens allow-listed websites, and performs web searches.
+- Folder: `ai-virtual-assistant/`
+- Stack: Python, SpeechRecognition, pyttsx3
+- Start: `cd ai-virtual-assistant && pip install -r requirements.txt && python main.py`
 
-## Tech stack
-HTML5 · CSS3 · Vanilla JavaScript
+### 3. AURA — AI Personal Butler
+A responsive productivity dashboard with tasks, quick notes, a sample activity feed, and a small assistant command panel. Tasks and notes persist in browser storage.
+- Folder: `aura-ai-butler/`
+- Stack: HTML, CSS, JavaScript
+- Start: Open `aura-ai-butler/index.html` in a browser.
 
-## Future improvements
-- Connect a real parking availability API or operator database
-- Add user authentication and persistent reservations
-- Add a backend API and database
-- Integrate a map SDK and verified parking operator data
+## Transparency
+These are portfolio/demo projects. ParkEase uses sample parking data, Jarvis supports a fixed set of commands, and AURA is a local front-end prototype with sample activity items. None claims live integration with private accounts or live parking systems.
 
 ## Author
 Jai Hari — B.Tech Artificial Intelligence & Machine Learning student
